@@ -29,21 +29,27 @@ nav {
   word-break: keep-all;
 }
 
-.navbar-container li a {
+
+.navbar-container li .nav-links {
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 600;
   color: #fff;
 }
 
-.navbar-container li a:hover,
-.navbar-container li a.active {
+
+.navbar-container li .nav-links:hover,
+.navbar-container li .nav-links.active {
+
+
   color: #8b6b61;
   transition: all 0.6s;
 }
 
-.navbar-container li a:hover::after,
-.navbar-container li a.active::after {
+
+.navbar-container li .nav-links:hover::after,
+.navbar-container li .nav-links.active::after {
+
   content: "";
   width: 50%;
   height: 2px;
@@ -53,6 +59,20 @@ nav {
   left: 20px;
   transition: all 0.6s;
 }
+
+
+.nav-link-btn {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav-link-btn:hover {
+  color: #8b6b61;
+  transition: all 0.6s;
+}
+
 
 .sign-in {
   padding: 4px 18px;
@@ -65,6 +85,12 @@ nav {
   position: relative;
   margin-left: 20px;
 }
+
+
+.sign-in:hover {
+  border: 1px solid #8b6b61;
+}
+
 
 .mobile {
   display: none;

@@ -1,6 +1,8 @@
 import "./Navbar.css";
 import React, { useState } from "react";
 
+import { Link } from "react-router-dom";
+
 function Navbar() {
   const [click, setClick] = useState(true);
 
@@ -11,31 +13,45 @@ function Navbar() {
   return (
     <>
       <nav>
-        <a href="index.html" className="navbar-logo">
+
+        <Link to="/" className="navbar-logo">
           {" "}
           Logo.
-        </a>
+        </Link>
+
         <div className="nav-items-container">
           <ul
             className={click ? "navbar-container active" : "navbar-container"}
             onClick={handleClick}
           >
             <li>
-              <a href="index.html" className="active">
+
+              <Link to="/" className="active nav-links">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="index.html">About</a>
+              <Link to="/" className="nav-links">
+                About
+              </Link>
             </li>
             <li>
-              <a href="index.html">Contact us</a>
+              <Link to="/" className="nav-links">
+                Contact us
+              </Link>
             </li>
             <li>
-              <a href="index.html">Report case</a>
+              <Link to="/" className="nav-links">
+                Report case
+              </Link>
             </li>
             <li>
-              <button className="sign-in">Sign up</button>
+              <button className="sign-in">
+                <Link to="/signup" className="nav-link-btn">
+                  Sign up
+                </Link>
+              </button>
+
             </li>
           </ul>
         </div>
