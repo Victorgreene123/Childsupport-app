@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import React, { useState } from "react";
+
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -12,16 +13,19 @@ function Navbar() {
   return (
     <>
       <nav>
+
         <Link to="/" className="navbar-logo">
           {" "}
           Logo.
         </Link>
+
         <div className="nav-items-container">
           <ul
             className={click ? "navbar-container active" : "navbar-container"}
             onClick={handleClick}
           >
             <li>
+
               <Link to="/" className="active nav-links">
                 Home
               </Link>
@@ -47,6 +51,7 @@ function Navbar() {
                   Sign up
                 </Link>
               </button>
+
             </li>
           </ul>
         </div>
