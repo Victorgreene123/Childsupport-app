@@ -1,0 +1,126 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: #8fbc8f;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.nav-items-container {
+  display: flex;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-container li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+  word-break: keep-all;
+}
+
+.navbar-container li .nav-links {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.navbar-container li .nav-links:hover,
+.navbar-container li .nav-links.active {
+  color: #8b6b61;
+  transition: all 0.6s;
+}
+
+.navbar-container li .nav-links:hover::after,
+.navbar-container li .nav-links.active::after {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: #8b6b61;
+  position: absolute;
+  bottom: -2px;
+  left: 20px;
+  transition: all 0.6s;
+}
+
+.nav-link-btn {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav-link-btn:hover {
+  color: #8b6b61;
+  transition: all 0.6s;
+}
+
+.sign-in {
+  padding: 4px 18px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  height: 40px;
+  position: relative;
+  margin-left: 20px;
+}
+
+.sign-in:hover {
+  border: 1px solid #8b6b61;
+}
+
+.mobile {
+  display: none;
+}
+
+.mobile i {
+  color: #fff;
+}
+
+@media only screen and (max-width: 946px) {
+  .navbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background: #8fbc8f;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.2);
+    padding: 40px 00 10px;
+    transition: right 0.4s;
+  }
+
+  .navbar-container.active {
+    right: -350px;
+  }
+
+  .navbar-container li {
+    margin-bottom: 25px;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .mobile i {
+    cursor: pointer;
+    font-size: 24px;
+  }
+}
