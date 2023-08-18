@@ -8,8 +8,8 @@ export default function Signup(){
          email : '', 
          password: '', 
          rememberPassword : true ,
-         first name:'',
-         last name:''
+         firstname :'',
+         lastname:''
      }) 
      const [talk,setTalk] = React.useState('') 
      const [emailtalk,setemailtalk] = React.useState('') 
