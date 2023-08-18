@@ -3,6 +3,54 @@ import '../App';
 import '../index.css'
 
 export default function Signup(){
+
+    const [formData,setFormdata] = React.useState({ 
+         email : '', 
+         password: '', 
+         rememberPassword : true 
+     }) 
+     const [talk,setTalk] = React.useState('') 
+     const [emailtalk,setemailtalk] = React.useState('') 
+     function handleChange(e){ 
+         const {name,value,checked,type} = e.target 
+         setFormdata(prevState => { 
+             return {...prevState, [name] : [type] == 'checkbox' ? checked : value } 
+         }); 
+         switch (name) { 
+             case 'email': 
+                 if(/^.+@+..+com/.test(value)){ 
+                     setemailtalk('Valid email') 
+                 } 
+                 else{ 
+                     setemailtalk('Invalid email') 
+                 } 
+             case "password": 
+                 if (value.length < 8 ){ 
+                     setTalk('password must be greater then 8 characters') 
+                 } 
+                 else{ 
+                     if(/\d/.test(value)){ 
+                         setTalk('Valid password') 
+                     } 
+                     else{ 
+                         setTalk('Must contains a number and a symbol') 
+                     } 
+  
+  
+                 } 
+  
+                 break; 
+  
+             default: 
+                 break; 
+         } 
+         // console.log(formData) 
+     } 
+     function handleSubmit(){ 
+  
+     }
+ 
+
     return(
         <div className='container'>
             <div className='row'>
