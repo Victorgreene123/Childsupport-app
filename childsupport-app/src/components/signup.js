@@ -36,7 +36,7 @@ export default function Signup(){
                             
 
                             <button className='signin'>Create account</button>
-                            <button className ='witgoogle'><span className='google-container'><img src='images/google.png'/> <span className='signgoogle'>Sign up with Google</span></span></button>
+                            <button className ='witgoogle'><span className='google-container'><img src='images/google.png' alt="icon of google" /> <span className='signgoogle'>Sign up with Google</span></span></button>
                             <p>Already have an account ? <Link to="/login">Log in</Link></p>
                         </form>
                 </div></div>
