@@ -1,24 +1,23 @@
-  import  React from "react";
+import React from "react";
 import Navbar from "./components/Navbar";
-import { BrowserRouter  ,Routes, Route } from "react-router-dom";
-import Home  from "./components/pages/Home";
-import SignUp from "./components/signup";
-import Login from "./components/login";
-import Layout from "./components/Layout.js"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/pages/Home";
+import SignUp from "./components/pages/SignUp";
+import Login from "./components/pages/Login";
+import About from "./components/pages/About";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        
+      <Router>
+        <Navbar />
         <Routes>
-          <Route path="/" Component={<Layout />} >
-          <Route path="signup" Component={<SignUp />} />
-          <Route path="login" Component={<Login />} />
-          <Route index Component={<Home />} />
-  </Route>
- </Routes>
-      </BrowserRouter>
+          <Route path="/" Component={Home} />
+          <Route path="/signup" Component={SignUp} />
+          <Route path="/login" Component={Login} />
+          <Route path="/about" Component={About} />
+        </Routes>
+      </Router>
     </>
   )
 }
