@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import './App';
-import './index.css'
+// import './App';
+import '../index.css'
 import React from 'react';
 
 export default function Login(){
@@ -14,7 +14,7 @@ export default function Login(){
     function handleChange(e){
         const {name,value,checked,type} = e.target
         setFormdata(prevState => {
-            return {...prevState, [name] : [type] == 'checkbox' ? checked : value }
+            return {...prevState, [name] : [type] === 'checkbox' ? checked : value }
         });
         switch (name) {
             case 'email':
@@ -24,6 +24,7 @@ export default function Login(){
                 else{
                     setemailtalk('Invalid email')
                 }
+                break
             case "password":
                 if (value.length < 8 ){
                     setTalk('password must be greater then 8 characters')
@@ -97,17 +98,17 @@ export default function Login(){
                             <Link to='/forgotpassword' className='forgotpassword'>Forgot Password</Link>
 
                             <button className='signin'>Sign in</button>
-                            <button className ='witgoogle'><span className='google-container'><img src='images/google.png'/> <span className='signgoogle'>Sign in with Google</span></span></button>
+                            <button className ='witgoogle'><span className='google-container'><img src='images/google.png' alt='google icon'/> <span className='signgoogle'>Sign in with Google</span></span></button>
                             <p>Dont have an account ? <Link to="/signup">Sign up</Link></p>
                         </form>
                 </div></div>
                 <div className='options'>
 
-                   <img src='images/children.png' className='other-img'></img>
+                   <img src='images/children.png' alt=' children' className='other-img'></img>
                    <br></br>
-                   <span className='quote-box'><img src='images/left-quote.png' className='quote' /><blockquote className="quote-content">Childhood is a precious chapter in every life story, and it is our collective responsibility to ensure that every child's journey is filled with love,care, and unwavering support.</blockquote>
+                   <span className='quote-box'><img src='images/left-quote.png' alt='quote' className='quote' /><blockquote className="quote-content">Childhood is a precious chapter in every life story, and it is our collective responsibility to ensure that every child's journey is filled with love,care, and unwavering support.</blockquote>
                 <br></br>
-                <img src='images/right-quote.png' className='quote' />
+                <img src='../public/right-quote.png' alt='quote' className='quote' />
                 </span></div>
             </div>
 
