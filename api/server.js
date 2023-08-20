@@ -1,9 +1,8 @@
 const express = require("express");
 const app = express();
+const dbFunction = require("./db/database");
 
-
-
-
+dbFunction();
 app.get("/", (req,res)=>{
     const responseData = {
         status : "Healthy",
