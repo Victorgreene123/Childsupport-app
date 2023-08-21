@@ -5,6 +5,7 @@ import Home from "./components/pages/Home";
 import SignUp from "./components/pages/SignUp";
 import Login from "./components/pages/Login";
 import About from "./components/pages/About";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,10 +18,10 @@ function App() {
           <Route path="/login" Component={Login} />
           <Route path="/about" Component={About} />
         </Routes>
+        <Footer />
       </Router>
     </>
-  )
+  );
 }
-
 
 export default App;

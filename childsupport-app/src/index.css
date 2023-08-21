@@ -1,179 +1,194 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-@media only screen and (max-width : 676px){
+@media only screen and (max-width: 676px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .form {
+    width: 100%;
+  }
 
+  .form-container {
+    width: 100%;
+  }
 
+  .options {
+    width: 100%;
+  }
 }
-@media only screen and (min-width : 677px) {
-  .navbar{
-    border-bottom: 0.5px solid white;
-      display: flex;
-      width: auto;
-      align-items: center;
-      border-color: white;
-      margin: 0;
-      color:white;
-      padding: 2px 15px;
-      position: relative;
-      height: 55px ;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    
-    .navitems{
-      list-style: none;
-      display: flex;
-      position:absolute;
-      right: 0;
-    }
-    .navitems > li{
-      font-size: 15px;
-      padding-left: 10px;
-      text-decoration: none;
-      font-weight: 250;
+/* @media only screen and (min-width: 677px) { */
+.navbar {
+  border-bottom: 0.5px solid white;
+  display: flex;
+  width: auto;
+  align-items: center;
+  border-color: white;
+  margin: 0;
+  color: white;
+  padding: 2px 15px;
+  position: relative;
+  height: 55px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 
-      
-    }
-    .navitems > li > a{
-      text-decoration: none;
-      color:white;
+.navitems {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+.navitems > li {
+  font-size: 15px;
+  padding-left: 10px;
+  text-decoration: none;
+  font-weight: 250;
+}
+.navitems > li > a {
+  text-decoration: none;
+  color: white;
+}
+.container {
+  width: 70%;
+  margin-left: 15%;
+  border: 0.5px solid white;
+  border-radius: 5px;
+  padding: 0px;
+  margin-block: 40px;
+  font-size: 12px;
+  text-align: left;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.row {
+  display: flex;
+  /* padding: 35px; */
+  background-color: white;
+  height: 600px;
+}
 
-    }
-   .container{
-    width: 70%;
-    margin-left: 15%;
-    border:0.5px solid white;
-    border-radius:5px;
-    padding: 0px;
-    margin-block: 40px;
-    font-size: 12px;
-    text-align: left;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   }
-   .row{
-    display:flex;
-    /* padding: 35px; */
-    background-color: white;
-    height:  600px;
-
-   }
-   .form-container{
-    padding: 15px;
-    width:50%;
-    
-   }
-   .options{
-    background-color: rgba(185, 181, 181, 0.301);
-    width:50%;
-    padding: 10px;
-    /* border-color: rgba(128, 128, 128, 0.568); */
-    border:none;
-    border-radius: 2px;
-    height:auto;
-   }
-   .other-img{
+@media only screen and (min-width: 676px) {
+  .options {
+    background: #5e8aa8;
     width: 50%;
-    margin-left: 25%;
-    margin-top: 35%;
-   
-   }
-  .quote-box{
+    padding: 10px;
+  }
+
+  .form-container {
+    padding: 15px;
+    width: 50%;
+  }
+
+  .form {
     display: block;
-    /* padding: 10px; */
-    width:100%;
-  }
-  .quote{
-    width: 20px;
-  }
-  .quote-content{
-    font-size: 15px;
-  }
-   .form{
-    display:block;
     /* width: 50%; */
     /* margin-left: 12.5%; */
     margin-block: 10px;
     padding-block: 10px;
-   
   }
-  .form-body{
+  .form-body {
     margin-top: 85px;
     width: 75%;
     margin-left: 12.5%;
   }
-  .form > .form-input > input {
-    margin-top: 5px;
-    width: 100%;
-    padding-block: 8px;
-    border-radius: 5px;
-    border:  0.5px solid rgba(0, 0, 0, 0.164);
-    font-size:  0.7rem;
-    padding-left: 5px;
-  }
-  .form > .form-input{
-    margin-top:  10px;
-  }
-  .form > label{
-    text-align: left;
-  }
-  
-  .form > .signin , .form > .witgoogle{
-    width: 100%;
-    padding-block: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    
-  }
-  .form > .signin {
-    background-color:rgba(98, 0, 128, 0.897);
-    color : white;
-    border-color: rgba(98, 0, 128, 0.897);
-    font-size: 0.75rem;
+}
 
-  }
-  .form > .witgoogle{
-    border: 0.5px solid rgba(0, 0, 0, 0.164);
-    color: black;
+.options {
+  z-index: 9999;
+  background-color: #5e8aa8;
+  /* width: 50%; */
+  /* padding: 10px; */
+  /* border-color: rgba(128, 128, 128, 0.568); */
+  border: none;
+  border-radius: 2px;
+  height: auto;
+}
+.other-img {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 35%;
+}
+.quote-box {
+  display: block;
+  /* padding: 10px; */
+  width: 100%;
+}
+.quote {
+  width: 20px;
+}
+.quote-content {
+  font-size: 15px;
+}
 
-  }
-  .form > .witgoogle > .google-container{
-     display: flex;
-     align-items: center;
-    width: 60%;
-    margin-left: 20%;
-    font-size: 0.73rem;
-  }
-  .form > .witgoogle > .google-container > img{
-    width: 20px;
- }
-  .form > .checkbox-container{
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    /* margin-right: auto; */
+.form > .form-input > input {
+  margin-top: 5px;
+  width: 100%;
+  padding-block: 8px;
+  border-radius: 5px;
+  border: 0.5px solid rgba(0, 0, 0, 0.164);
+  font-size: 0.7rem;
+  padding-left: 5px;
+}
+.form > .form-input {
+  margin-top: 10px;
+}
+.form > label {
+  text-align: left;
+}
 
-  }
-  .forgotpassword{
+.form > .signin,
+.form > .witgoogle {
+  width: 100%;
+  padding-block: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.form > .signin {
+  background-color: rgba(143, 188, 143, 0.692);
+  color: white;
+  border-color: rgba(25, 102, 165, 0.897);
+  font-size: 0.75rem;
+}
+.form > .witgoogle {
+  border: 0.5px solid rgba(0, 0, 0, 0.164);
+  color: black;
+}
+.form > .witgoogle > .google-container {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  margin-left: 20%;
+  font-size: 0.73rem;
+}
+.form > .witgoogle > .google-container > img {
+  width: 20px;
+}
+.form > .checkbox-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  /* margin-right: auto; */
+}
+.forgotpassword {
   margin-left: 30%;
- }
- .form > div{
+}
+.form > div {
   width: 100%;
   padding: 0px;
-  margin-top:  10px;
- }
-  .signgoogle{
-    margin-left:  10px;
-  }
-  
+  margin-top: 10px;
 }
+.signgoogle {
+  margin-left: 10px;
+}
+/* } */

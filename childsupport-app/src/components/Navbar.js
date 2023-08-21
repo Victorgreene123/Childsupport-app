@@ -13,10 +13,13 @@ function Navbar() {
   return (
     <>
       <nav>
-
         <Link to="/" className="navbar-logo">
           {" "}
-          Logo.
+          <img
+            src={process.env.PUBLIC_URL + "/logo.png"}
+            alt="logo"
+            className="logo"
+          />
         </Link>
 
         <div className="nav-items-container">
@@ -25,7 +28,6 @@ function Navbar() {
             onClick={handleClick}
           >
             <li>
-
               <Link to="/" className="active nav-links">
                 Home
               </Link>
@@ -51,7 +53,6 @@ function Navbar() {
                   Sign up
                 </Link>
               </button>
-
             </li>
           </ul>
         </div>

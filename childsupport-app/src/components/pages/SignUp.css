@@ -1,0 +1,23 @@
+.error-msg {
+  color: #ff0000;
+}
+
+.options {
+  background: #5e8aa8;
+}
+
+.form > .signin,
+.witgoogle {
+  background-color: #8fbc8f;
+  border: 1px solid #8fbc8f;
+  outline: none;
+  color: #fff;
+}
+
+.form > .form-input > input {
+  outline: none;
+}
+
+.signgoogle {
+  color: #fff;
+}
