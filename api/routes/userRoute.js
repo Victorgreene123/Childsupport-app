@@ -4,9 +4,15 @@ const router = express.Router(); // to handle different request in user route
 const mongoose = require("mongoose"); // to perform various operation to MONGODB
 const user = require("../models/userModel"); // user schema
 const { body, validationResult } = require('express-validator'); // to validate user credentials
-const bcrypt = require('bcrypt'); // to has password
+const bcrypt = require('bcrypt'); // to hash password
+
+const passport = require("passport"); // used
+const passportLocal = require("passport-local").Strategy;
+const cookieParser = require("cookie-parser"); //used
+
 const saltRounds = 10; // will generate difficult password i.e. more stronger
-// ROUTE 1 : Creation of new user
+
+//---------------- ROUTE 1 : Creation of new user --------------
 router.post(
     "/createUser",
     // first validate credentials using express-validator
@@ -70,5 +76,22 @@ router.post(
         }
     }
 );
+
+//---------------- ROUTE 2 : Login  user --------------
+router.post("/loginUser",(req,res,next)=>{
+    passport.authenticate("local",(err,user,info)=>{
+        console.log(user);
+        if (err) {
+            throw err
+        }
+        if(!user){
+            res.json({
+                "success" : true,
+                "message" : "user loged in successfully"
+            })
+        }
+    })(req,res,next)
+})
+
 
 module.exports = router;
