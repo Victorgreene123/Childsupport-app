@@ -78,10 +78,8 @@ router.post(
 );
 
 //---------------- ROUTE 2 : Login  user --------------
-router.post("/loginUser", (req, res, next) => {
+router.post("/loginUser", async (req, res, next) => {
     passport.authenticate("local", (err, user, info) => {
-        console.log("from login route" + user);
-        console.log(user);
         if (err) {
             return res.status(500).json({
                 success: false,
@@ -102,16 +100,11 @@ router.post("/loginUser", (req, res, next) => {
                     message: 'An error occurred' 
                 });
             }
-
             return res.status(200).json({ 
                 success: true,
-                message: 'Login successful' 
+                message: 'Login successful!' 
             });
         });
-        // return res.json({
-        //     "success": true,
-        //     "message": "user loged in successfully"
-        // })
     })(req, res, next)
 })
 
