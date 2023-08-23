@@ -56,7 +56,7 @@ router.post(
                     //step 2 : Create new user & save
                     const newUser = new user({
                         email: email,
-                        userDetails: { firstName, lastName, email, password : hashedPassword },
+                        userDetails: { firstName, lastName, email, password: hashedPassword },
                     });
                     await newUser.save();
                     res.json({
@@ -78,19 +78,41 @@ router.post(
 );
 
 //---------------- ROUTE 2 : Login  user --------------
-router.post("/loginUser",(req,res,next)=>{
-    passport.authenticate("local",(err,user,info)=>{
+router.post("/loginUser", (req, res, next) => {
+    passport.authenticate("local", (err, user, info) => {
+        console.log("from login route" + user);
         console.log(user);
         if (err) {
-            throw err
+            return res.status(500).json({
+                success: false,
+                message: 'An error occurred'
+            });
         }
-        if(!user){
-            res.json({
-                "success" : true,
-                "message" : "user loged in successfully"
+        if (!user) {
+            // if(user === false){
+            return res.status(401).json({
+                "success": false,
+                "message": "Invalid email or password"
             })
         }
-    })(req,res,next)
+        req.login(user, (err) => {
+            if (err) {
+                return res.status(500).json({ 
+                    success: false,
+                    message: 'An error occurred' 
+                });
+            }
+
+            return res.status(200).json({ 
+                success: true,
+                message: 'Login successful' 
+            });
+        });
+        // return res.json({
+        //     "success": true,
+        //     "message": "user loged in successfully"
+        // })
+    })(req, res, next)
 })
 
 

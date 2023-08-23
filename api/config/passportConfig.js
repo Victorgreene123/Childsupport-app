@@ -1,18 +1,18 @@
 const User = require("../models/userModel");
 const bcrypt = require("bcrypt"); // to unhash & compare password
 const localStrategy = require("passport-local").Strategy;
-
+const mongoose = require("mongoose"); // to perform various operation to MONGODB
 
 // the passport parameter will be used here & the this middleware will be used acrros application
 module.exports = function (passport) {
     // --- Defining strategy starts ----
     passport.use(
         new localStrategy({
-            usernameField: 'email', // Specify the field containing the email
-            passwordField: 'password', // Specify the field containing the password
+            usernameField: 'email', // Specifying the field containing the email on re.body object
+            passwordField: 'password', // Specifying the field containing the password re.body object
         }, async (userEmail, password, done) => {
-            console.log("from strategy " + userEmail);
             try {
+                console.log("I am inside try catch");
                 const foundUser = await User.findOne({ email: userEmail });
                 if (!foundUser) {
                     //no user found with email
@@ -20,21 +20,26 @@ module.exports = function (passport) {
                 }
                 // ---- user found  ---
                 // compare the user password
-                bcrypt.compareSync(password, foundUser.userDetails.password, (err, isPassMatched) => {
+                bcrypt.compare(password, foundUser.userDetails.password, function(err, result) {
+                    console.log("I am checking password");
                     if (err) {
                         // if error
-                        throw err
+                        // throw err
+                        console.log(err);
                     }
-                    if (isPassMatched === true) {
+                    if (result === true) {
+                        console.log("I am inside true");
                         // --- password matched & return user --
                         return done(null, foundUser)
                     } else {
                         //--- password not matched ---
+                        console.log("password did not matched");
                         return done(null, false)
                     }
-                })
+                });
             } catch (error) {
-               console.log(error);
+            //   throw error;
+               console.log("Some error");
             }
 
             //serach user
@@ -62,39 +67,6 @@ module.exports = function (passport) {
             //         }
             //     })
             // })
-
-
-
-
-
-            // User.findOne({ email: userEmail }, (error, foundUser) => {
-            //     if (error) {
-            //         throw error
-            //     }
-            //     if (!foundUser) {
-            //         //no user found with email
-            //         return done(null, false)
-            //     }
-            //     // ---- user found  ---
-            //     // compare the user password
-            //     bcrypt.compareSync(password, foundUser.userDetails.password, (err, isPassMatched) => {
-            //         if (err) {
-            //             // if error
-            //             throw err
-            //         }
-            //         if (isPassMatched === true) {
-            //             // --- password matched & return user --
-            //             return done(null, foundUser)
-            //         } else {
-            //             //--- password not matched ---
-            //             return done(null, false)
-            //         }
-            //     })
-            // })
-
-
-
-
 
 
         })
