@@ -79,6 +79,7 @@ router.post(
 
 //---------------- ROUTE 2 : Login  user --------------
 router.post("/loginUser", async (req, res, next) => {
+    // console.log("Authenticate status " + req.isAuthenticated()); // expected false becoz user not logedIn
     passport.authenticate("local", (err, user, info) => {
         if (err) {
             return res.status(500).json({
@@ -86,8 +87,10 @@ router.post("/loginUser", async (req, res, next) => {
                 message: 'An error occurred'
             });
         }
-        if (!user) {
-            // if(user === false){
+        // console.log(user);
+        // if (!user) {
+        if (user === false) {
+            // console.log("Entering wrong password"); 
             return res.status(401).json({
                 "success": false,
                 "message": "Invalid email or password"
@@ -95,14 +98,16 @@ router.post("/loginUser", async (req, res, next) => {
         }
         req.login(user, (err) => {
             if (err) {
-                return res.status(500).json({ 
+                return res.status(500).json({
                     success: false,
-                    message: 'An error occurred' 
+                    message: 'An error occurred'
                 });
             }
-            return res.status(200).json({ 
+            // console.log("Authenticate status " + req.isAuthenticated()); // expected true
+            //console.log("after successfull login" + req.user); // user is saved to req.user object
+            return res.status(200).json({
                 success: true,
-                message: 'Login successful!' 
+                message: 'Login successful!'
             });
         });
     })(req, res, next)
