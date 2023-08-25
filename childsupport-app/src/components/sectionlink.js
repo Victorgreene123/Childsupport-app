@@ -73,7 +73,7 @@ const component = linkstates.map((link) =>{
     <Link to={`/dashboard/${link.name === 'Dashboard' ? '' : link.name}`}>
     <li key={link.name}  className={`sections-link ${link.className}`}>
         <span className='sectionlinkholder'>
-        <img src={`http://localhost:3000/images/${link.icon}`} className='sectionlinkicon'></img>
+        <img src={`http://localhost:3000/${link.icon}`} className='sectionlinkicon'></img>
         <span className='sectionlinkname'>{link.name}</span>
         </span></li>
         </Link>
