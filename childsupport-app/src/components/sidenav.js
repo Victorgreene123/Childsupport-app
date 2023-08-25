@@ -6,8 +6,8 @@
 
 
 import { Link } from 'react-router-dom';
-import './App';
-import './index.css'
+import '../App';
+import '../index.css'
 import React from 'react';
 import Sectionlink from './sectionlink';
 
@@ -21,7 +21,7 @@ return(
     <h3 className='section-heading'>ACTIONS</h3>
  
     <a className='sections-link' id='settings'><span className='sectionlinkholder'>
-        <img src='images/settings.png' className='sectionlinkicon'></img>
+        <img src='http://localhost:3000/settings.png' className='sectionlinkicon'></img>
         <span className='sectionlinkname'>Settings</span>
         </span></a>
     
