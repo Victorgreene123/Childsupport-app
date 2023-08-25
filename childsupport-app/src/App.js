@@ -6,19 +6,53 @@ import SignUp from "./components/pages/SignUp";
 import Login from "./components/pages/Login";
 import About from "./components/pages/About";
 import Footer from "./components/Footer";
+import Dashboard from './components/dashboard';
+import Reports from './components/Reports';
+import Dashboardcontainer from './components/dashboardcontainer';
+import Profile from './components/profilecontainer';
+import Peers from './components/peerscontainer';
+import Mentors from './components/mentorscontainer';
+import Layout from './components/Layout'
 
 function App() {
   return (
     <>
       <Router>
-        <Navbar />
+        
+
+    
         <Routes>
-          <Route path="/" Component={Home} />
-          <Route path="/signup" Component={SignUp} />
-          <Route path="/login" Component={Login} />
-          <Route path="/about" Component={About} />
+<Route path='/' element={<Layout />}>
+                <Route path='navbar' element={<Navbar />}/>
+                <Route path='footer' element={<Footer />}/>
+                <Route index element={<Home />}/>
+                <Route path='login' element={<Login />}/>
+                <Route path='signup' element={<Signup />}/>
+                <Route path="about" Component={<About />} />
+      
+
+               </Route>
+ 
+           <Route path='/dashboard' element={<Dashboard />}>
+        <Route index element={ <Dashboardcontainer />}/>
+        {/* <Route path='/' element={ <Dashboardcontainer />} /> */}
+
+        <Route path='Reports' element={ <Reports />}/>
+        <Route path='me' element={ <Profile />}/>
+        <Route path='Scholarships' element={ <Profile />}/>
+        <Route path='Peers' element={ <Peers />}/>
+        <Route path='Resources' element={ <Profile />}/>
+        <Route path='Mentors' element={ <Mentors />}/>
+        <Route path='Meetings' element={ <Profile />}/>
+            
+            
+            </Route>
+          
+
+    
+          
         </Routes>
-        <Footer />
+        
       </Router>
     </>
   );
