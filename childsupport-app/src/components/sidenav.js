@@ -43,7 +43,7 @@ return(
        </div>
      </div> */}
    <a className='sections-link logout'> <span className='sectionlinkholder'>
-        <img src='images/logout-1.png' className='sectionlinkicon'></img>
+        <img src='http://localhost:3000/logout-1.png' className='sectionlinkicon'></img>
         <span className='sectionlinkname logoutname'> Log out </span></span></a>
  </div>
     
