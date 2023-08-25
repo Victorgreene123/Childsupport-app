@@ -4,10 +4,9 @@
 
 
 
-import './App';
-import './index.css'
-import Navbar from './navbar'
-import Footer from './footer'
+import '../App';
+import '../index.css'
+
 import { Outlet,Link } from 'react-router-dom';
 import React from 'react';
 import Sidenav from './sidenav';
@@ -36,7 +35,6 @@ return(
 
 </div>
 
-<Footer></Footer>
 </div></div>
 </>
 )
