@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://sdk.videosdk.live/rtc-js-prebuilt/0.3.21/rtc-js-prebuilt.js"></script>
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -28,7 +29,60 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <script>
+        var script = document.createElement("script")
+        script.type= "text/javascript"
+        script.addEventListener("load", 
+        function (event)  { 
+    const meeting = new VideoSDKMeeting(); 
+    const config = { 
+        name: "John Doe", 
+        apiKey: "API KEY", 
+     meetingId: "milkyway", 
+      containerId: null,
+       redirectOnLeave: "https://www.videosdk.live/",
+       micEnabled: true, 
+       webcamEnabled: true, 
+       participantCanToggleSelfWebcam: true,
+    participantCanToggleSelfMic: true,
+     chatEnabled: true,
+     screenShareEnabled: true,
+     pollEnabled: true,
+     whiteBoardEnabled: true,
+      raiseHandEnabled: true,
+       recordingEnabled: true,
+        recordingWebhookUrl: "https://www.videosdk.live/callback",
+        participantCanToggleRecording: true, 
+        brandingEnabled: true, 
+        brandLogoURL: "https://picsum.photos/200", 
+        brandName: "Awesome startup", 
+        poweredBy: true,
+         participantCanLeave: true,
+           livestream: { 
+            autoStart: true, 
+            outputs: [
+             {  
+                url: "rtmp://http://x.rtmp.youtube.com/live2",
+             streamKey: "<STREAM KEY FROM YOUTUBE>" 
+            }, 
+        ], 
+    }, 
+                whiteboardEnabled: true, 
+                permissions: { 
+                    askToJoin: false, 
+                     toggleParticipantMic: true, 
+                     toggleParticipantWebcam: true, 
+                      drawOnWhiteboard: true, toggleWhiteboard: true, },
+                       joinScreen: { visible: true,
+                        title: "Daily scrum", 
+                         meetingUrl: window.location.href,  }, }; 
+                         meeting.init(config); 
+                        }); 
+                        script.src = "https://sdk.videosdk.live/rtc-js-prebuilt/0.1.21/rtc-js-prebuilt.js"; 
+                      document.getElementsByTagName("head")[0].appendChild(script);
+</script>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

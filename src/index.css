@@ -1,13 +1,537 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: rgba(221, 160, 221, 0.747);
+   */
+   background-color: white;
+ 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+h1,h2,h3,h4,h5,h6{
+  margin-top: 0;
+  /* line-height: 1.25px; */
+}
+
+@media only screen and (max-width : 766px) {
+   
+}
+@media only screen and (min-width : 767px) {
+  .navbar{
+    border-bottom: 0.5px solid white;
+      display: flex;
+      width: auto;
+      align-items: center;
+      border-color: white;
+      margin: 0;
+      color:white;
+      padding: 2px 15px;
+      position: relative;
+      height: 55px ;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    .navitems{
+      list-style: none;
+      display: flex;
+      position:absolute;
+      right: 0;
+    }
+    .navitems > li{
+      font-size: 15px;
+      padding-left: 10px;
+      text-decoration: none;
+      font-weight: 250;
+
+      
+    }
+    .navitems > li > a{
+      text-decoration: none;
+      color:white;
+
+    }
+   .container{
+    width: 70%;
+    margin-left: 15%;
+    border:0.5px solid white;
+    border-radius:5px;
+    padding: 0px;
+    margin-block: 40px;
+    font-size: 12px;
+    text-align: left;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
+   .row{
+    display:flex;
+    /* padding: 35px; */
+    background-color: white;
+    height:  600px;
+
+   }
+   .form-container{
+    padding: 15px;
+    width:50%;
+    
+   }
+   .options{
+    background-color: rgba(185, 181, 181, 0.301);
+    width:50%;
+    padding: 10px;
+    /* border-color: rgba(128, 128, 128, 0.568); */
+    border:none;
+    border-radius: 2px;
+    height:auto;
+   }
+   .other-img{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 35%;
+   
+   }
+  .quote-box{
+    display: block;
+    /* padding: 10px; */
+    width:100%;
+  }
+  .quote{
+    width: 20px;
+  }
+  .quote-content{
+    font-size: 15px;
+  }
+   .form{
+    display:block;
+    /* width: 50%; */
+    /* margin-left: 12.5%; */
+    margin-block: 10px;
+    padding-block: 10px;
+   
+  }
+  .form-body{
+    margin-top: 85px;
+    width: 75%;
+    margin-left: 12.5%;
+  }
+  .form > .form-input > input {
+    margin-top: 5px;
+    width: 100%;
+    padding-block: 8px;
+    border-radius: 5px;
+    border:  0.5px solid rgba(0, 0, 0, 0.164);
+    font-size:  0.7rem;
+    padding-left: 5px;
+  }
+  .form > .form-input{
+    margin-top:  10px;
+  }
+  .form > label{
+    text-align: left;
+  }
+  
+  .form > .signin , .form > .witgoogle{
+    width: 100%;
+    padding-block: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    
+  }
+  .form > .signin {
+    background-color:rgba(98, 0, 128, 0.897);
+    color : white;
+    border-color: rgba(98, 0, 128, 0.897);
+    font-size: 0.75rem;
+
+  }
+  .form > .witgoogle{
+    border: 0.5px solid rgba(0, 0, 0, 0.164);
+    color: black;
+
+  }
+  .form > .witgoogle > .google-container{
+     display: flex;
+     align-items: center;
+    width: 60%;
+    margin-left: 20%;
+    font-size: 0.73rem;
+  }
+  .form > .witgoogle > .google-container > img{
+    width: 20px;
+ }
+  .form > .checkbox-container{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    /* margin-right: auto; */
+
+  }
+  .forgotpassword{
+  margin-left: 30%;
+ }
+ .form > div{
+  width: 100%;
+  padding: 0px;
+  margin-top:  10px;
+ }
+  .signgoogle{
+    margin-left:  10px;
+  }
+  .sidenav{
+    width: calc(22%);
+    /* background-color: rgba(240, 216, 216, 0.377); */
+    background-color: #f5f4f2;
+    position: relative;
+    height: calc(100vh);
+  }
+  .block1{
+    padding: 20px 0px;
+    padding-left: 15px;
+  }
+  .right{
+    width: calc(100% - (22%));
+    /* background-color: beige; */
+    padding: 0px 0px;
+    display: flex;
+  }
+  .sections, .aside{
+    list-style: none;
+    text-align: left;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    /* margin-left: 15%; */
+    padding: 0;
+    width: 70%;
+    
+  }
+  .section-heading{
+    color: gray;
+    font-size: 14px;
+    font-weight: 415 ;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    /* border-bottom : 2px solid black; */
+    width: max-content;
+    margin-left: 8px;
+  }
+  #settings{
+    display: block;
+  
+
+  }
+  .section-heading:first-child{
+    margin-top: 0;
+  }
+  .sections-link{
+    color: black;
+    margin-block: 15px;
+    font-weight: 435 ;
+    cursor: pointer;
+    margin-left: 5px;
+   
+  }
+  .dashboard{
+    border:0.5px solid black;
+    background-color: black;
+    padding: 5px ;
+    border-radius : 4px;
+   margin-left: 0;
+    padding-right: 0;
+  }
+  .dashboard > .sectionlinkholder > .sectionlinkname{
+    color: white;
+  }
+  .sectionlinkname{
+    margin-left: 7px;
+    color: rgb(138, 127, 127);
+    margin-top: 0px;
+  }
+ 
+  .sectionlinkholder{
+    display: flex;
+    align-items: center;
+  }
+  .sectionlinkicon{
+    width:15px;
+  }
+  .row-dashboard{
+    background-color: black;
+  }
+  
+  .aside{
+    /* position: absolute; */
+    /* bottom: 0px; */
+   padding: 0px 5px;
+    margin: 0;
+    margin-block: 20px;
+    border-top: 0.1px solid rgb(139, 131, 131);
+    width: calc(100% - 10px);
+    padding-top: 5px;
+  }
+  .profile{
+    height: 50px;
+    width: 100%;
+    
+    display: flex;
+    align-content: center;
+    color: black;
+    padding-block: 2px ;
+  }
+  
+  
+  .pic{
+    width: calc(20% - 10px);
+
+  }
+  
+
+  
+  .logoutname{
+    color:white;
+    margin-left: 4px;
+    font-size: 11px;
+  }
+  .logout{
+    display: block;
+    border: 0.5px solid rgb(92, 199, 92);
+    background-color: rgb(92, 199, 92);
+    padding: 10px 20px;
+    width: 35%;
+     margin-left: 10%;
+    margin-top: 10px;
+    border-radius: 4px;
+    
+  }
+  .container2{
+    width: 100%;
+  }
+  .middle{
+    width: calc(94%);
+    padding:  5px 10px;
+    
+  }
+  .statscontainer{
+    display: flex;
+    padding-block: 40px ;
+    width: calc(97% - 40px);
+    /* padding-left: 20px;
+    padding-right: 10px; */
+    padding:  20px 20px;
+  }
+  .stat{
+    border: 0.5px solid #f5f4f2;
+    background-color: #f5f4f2;
+    padding: 10px;
+    width: calc(33.33% - 30px);
+    height: 122px;
+    /* padding-bottom: 10px; */
+    /* align-items: center; */
+    border-radius: 0px 23px 0px 23px;
+    text-align: left;
+    margin-right:  1%;
+  }
+  .general-row{
+    display: flex;
+    margin-top: 0px;
+    padding: 0;
+  }
+  .statname{
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5px;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  .stat-value{
+    font-size: 25px;
+    margin: 0;
+    color: black;
+    text-align: left;
+    line-height: 1.5px;
+    
+  }
+  
+  .stat-division-1{
+    margin-right : auto;
+  }
+  .stat-division-1 , .stat-division-2{
+    color: rgb(63, 60, 60);
+    
+  }
+  .division-title{
+  font-weight: 450;
+  font-size: 13px;
+  }
+ 
+  .bullet{
+    font-size: 25px;
+    color:rgb(92, 199, 92);
+    margin-right: 3px;
+    
+  }
+  .sessionsavailable-container{
+     width: calc(80% - 40px);
+     height: calc(100vh - 380px);
+     padding: 40px 20px;
+     background-color: #f5f4f2;
+     /* margin-left:20px; */
+     border-radius: 5px;
+     margin-left: calc(10% + 20px);
+  }
+  .sessions-table{
+    width: 95%;
+    padding: 10px;
+    
+  }
+  .sessions-table-body{
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+  }
+  .Live, .join{
+    border: 0.5px solid;
+    padding: 3px 3px;
+    border-radius: 4px;
+    display: block;
+    color: white;
+  }
+  .Live{
+    
+    background-color: red;
+  }
+  .join{
+    background-color:rgb(92, 199, 92) ; 
+    cursor: pointer;
+  }
+  .extra{
+    display: block;
+    width:calc(6% - 4px);
+    padding:20px 2px ;
+    height: calc(100vh - 40px);
+    border-left:0.5px solid #f5f4f2;
+    background-color: #f5f4f2;
+
+  }
+   .img{
+    
+    /* margin-left: 25%; */
+    display: block;
+    margin-bottom: 15px;
+    width: calc(50%);
+    margin-left: 25%;
+  }
+  a{
+    text-decoration: none;
+  }
+  .addreport{
+    background-color: #2b3ddb;
+    padding: 10px 15px;
+    border: 0.5px solid #2b3ddb;
+    border-radius: 4px;
+    color : white;
+    font-size: 13px;
+  }
+  .page-heading{
+    text-align: left;
+   
+    color:gray;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .profilepic{
+    border: 0.5px solid black;
+    border-radius: 45%;
+    /* background-color: white; */
+    width:40px;
+    
+  }
+  .profilehead{
+    width:100%;
+    /* margin-left: 25%; */
+   display: flex;
+  }
+  .profile-container{
+    border:  0.5px solid black;
+    width:65%;
+    margin-left: 25%;
+
+  }
+  .img-name{
+    width:30%;
+    
+  }
+  .profilepic-big{
+    width: 80%;
+    margin-left: 10%;
+    /* margin-left: 37.5%; */
+  }
+    .name{
+line-height: 10px;
+font-size: 19px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+   }
+   .bio{
+    margin-top: 0;
+    line-height: 1px;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+   }
+   .peersandmentors{
+     font-size: 0.9rem;
+     color: gray;
+     display: flex;
+     width: 70%;
+     align-items: center;
+     margin-top: 0;
+     line-height: 15px;
+    padding: 10px;
+    margin-left: 4%;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   }
+  .peersandmentors > p{
+    margin-right: 15%;
+    font-size: 21px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  }
+ .profdetails{
+  font-size: 0.9rem;
+ }
+ .peerscontainer , .mentorscontainer{
+  padding: 20px;
+ }
+ .peer, .mentor{
+      display: flex;
+      align-items: center;
+      
+ }
+ .peer-text-details , .mentor-text-details{
+  padding: 2px;
+  display: flex;
+  width: 80%;
+  align-items: center;
+ }
+ .peername , .mentorname{
+     margin-left: 10%;
+
+ }
+ .togglepeer{
+  margin-left: 10%;
+  padding: 5px 10px;
+  border : 0.5px solid rgb(28, 28, 201);
+  background-color : rgb(28, 28, 201);
+  width: max-content;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.7rem;
+ }
 }
