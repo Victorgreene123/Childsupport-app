@@ -92,5 +92,19 @@ router.post("/loginUser", async (req, res, next) => {
     })(req, res, next)
 })
 
+router.post("/logoutUser",(req,res)=>{
+    try {
+        req.logout(); // Log out the user
+        res.status(200).json({ 
+            success:true,
+            message: 'Logout successful' 
+        });
+    } catch (error) {
+        res.status(500).json({ 
+            success:false,
+            message: 'Unable to logout. Try after some time' 
+        });
+    }
+})
 
 module.exports = router;
