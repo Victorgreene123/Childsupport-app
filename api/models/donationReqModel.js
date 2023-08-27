@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const donationReqSchema = new schema({
+const donationReqSchema = new Schema({
     title : {
         type : String
     },
@@ -16,3 +16,5 @@ const donationReqSchema = new schema({
         default: Date.now, // Optional default value
     }
 })
+
+module.exports = mongoose.model("DonationReq",donationReqSchema);

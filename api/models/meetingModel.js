@@ -13,3 +13,5 @@ const meetingSchema = new Schema({
         default: Date.now, // starting date of meeting 
     }
 })
+
+module.exports = mongoose.model("Meeting",meetingSchema);
