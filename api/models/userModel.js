@@ -11,7 +11,9 @@ const userSchema = new Schema({
          firstName : String,
          lastName : String,
          password : String,
-         otherThings :{}
+    },
+    userType : {
+      type : String // children or mentor
     }
  });
  
