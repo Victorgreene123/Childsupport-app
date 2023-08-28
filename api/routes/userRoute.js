@@ -94,7 +94,10 @@ router.post("/loginUser", async (req, res, next) => {
 
 router.post("/logoutUser",(req,res)=>{
     try {
-        req.logout(); // Log out the user
+        // req.logout(); // Log out the user
+        // console.log(req.signedCookies);
+        console.log(req.rawHeaders);
+        // console.log(req.isAuthenticated());
         res.status(200).json({ 
             success:true,
             message: 'Logout successful' 

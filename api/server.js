@@ -22,12 +22,12 @@ app.use(cors({
     origin : process.env.ALLOWED_ORIGIN_URL1,
     credentials : true
 }));
+app.use(cookieParser(process.env.SECRET_FOR_SESSION));
 app.use(session({
     secret : process.env.SECRET_FOR_SESSION,
     resave : false,
     saveUninitialized: false,
 }))
-app.use(cookieParser(process.env.SECRET_FOR_SESSION));
 app.use(passport.initialize());
 app.use(passport.session());
 require("./config/passportConfig")(passport)

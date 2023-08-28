@@ -27,7 +27,7 @@ function App() {
                 <Route path='footer' element={<Footer />}/>
                 <Route index element={<Home />}/>
                 <Route path='login' element={<Login />}/>
-                <Route path='signup' element={<Signup />}/>
+                <Route path='signup' element={<SignUp />}/>
                 <Route path="about" Component={<About />} />
       
 
