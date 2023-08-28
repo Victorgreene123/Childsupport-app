@@ -1,13 +1,9 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const dbFunction = require("./db/database");
+const dbFunction = require("./db/database"); // database connection function
 const bodyParser = require("body-parser"); // to get form data
 const cors = require("cors");
-const session = require("express-session");
-const cookieParser = require("cookie-parser");
-const passport = require("passport");
-const passportLocal = require("passport-local").Strategy;
 // ----------------- END OF IMPORTING ---------------------
 
 
@@ -22,15 +18,7 @@ app.use(cors({
     origin : process.env.ALLOWED_ORIGIN_URL1,
     credentials : true
 }));
-app.use(cookieParser(process.env.SECRET_FOR_SESSION));
-app.use(session({
-    secret : process.env.SECRET_FOR_SESSION,
-    resave : false,
-    saveUninitialized: false,
-}))
-app.use(passport.initialize());
-app.use(passport.session());
-require("./config/passportConfig")(passport)
+
 
 // -------------- END OF ALL ROUTE MIDDLEWARES -----------------------
 
