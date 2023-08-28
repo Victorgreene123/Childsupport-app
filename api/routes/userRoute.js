@@ -3,11 +3,10 @@ const express = require("express");
 const router = express.Router(); // to handle different request in user route
 const mongoose = require("mongoose"); // to perform various operation to MONGODB
 const user = require("../models/userModel"); // user schema
-const bcrypt = require('bcrypt'); // to hash password
-
-
 const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt'); // to hash password
 const saltRounds = 10; // will generate difficult password i.e. more stronger
+const isUserAuthenticated = require("../middlewares/checkAuthentication")
 
 //---------------- ROUTE 1 : Creation of new user --------------
 router.post(
@@ -95,6 +94,15 @@ router.post("/loginUser", async (req, res) => {
             error
         })
     }
+})
+
+//---------------- ROUTE 3 : get user details --------------
+router.get("/getUser", isUserAuthenticated ,async (req,res)=>{
+   const userId = req.userId;
+   res.json({
+    success : true,
+    message : " getting user details"
+   })
 })
 
 module.exports = router;
