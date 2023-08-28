@@ -13,7 +13,7 @@ import React from 'react';
 import Sectionlink from './sectionlink';
 import { memo } from 'react';
 
-export default memo(function ReportsContainer(){
+export default memo(function SessionsContainer(){
 return(
 
 <>
