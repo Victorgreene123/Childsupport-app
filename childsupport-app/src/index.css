@@ -29,7 +29,7 @@ code {
     width: 100%;
   }
 }
-/* @media only screen and (min-width: 677px) { */
+@media only screen and (min-width: 677px) { 
 .navbar {
   border-bottom: 0.5px solid white;
   display: flex;
@@ -77,8 +77,6 @@ code {
   background-color: white;
   height: 600px;
 }
-  }
-@media only screen and (min-width: 677px) {
   .options {
     background: #5e8aa8;
     width: 50%;
