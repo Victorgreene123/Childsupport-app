@@ -2,6 +2,9 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const meetingSchema = new Schema({
+    meetingId : {
+       type: String
+    },
     title : {
         type : String // tittle of meeting
     },
