@@ -8,6 +8,12 @@ const donationReqSchema = new Schema({
     recipientId : {
         type : mongoose.Schema.Types.ObjectId
     },
+    donationPurpose : {
+       type : String
+    },
+    donationProof : {
+       type : String
+    },
     amount : {
         type : Number
     },
