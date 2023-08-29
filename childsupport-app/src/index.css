@@ -29,7 +29,9 @@ code {
     width: 100%;
   }
 }
-@media only screen and (min-width: 677px) { 
+
+/* @media only screen and (min-width: 677px) { */
+
 .navbar {
   border-bottom: 0.5px solid white;
   display: flex;
@@ -43,6 +45,7 @@ code {
   height: 55px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
 
 .navitems {
   list-style: none;
@@ -77,8 +80,9 @@ code {
   background-color: white;
   height: 600px;
 }
+
+@media only screen and (min-width: 676px) {
   .options {
-    background: #5e8aa8;
     width: 50%;
     padding: 10px;
   }
@@ -101,10 +105,10 @@ code {
     margin-left: 12.5%;
   }
 
+}
 
 .options {
   z-index: 9999;
-  background-color: #5e8aa8;
   /* width: 50%; */
   /* padding: 10px; */
   /* border-color: rgba(128, 128, 128, 0.568); */
@@ -153,7 +157,7 @@ code {
   border-radius: 5px;
 }
 .form > .signin {
-  background-color: rgba(143, 188, 143, 0.692);
+  /* background-color: rgba(143, 188, 143, 0.692); */
   color: white;
   border-color: rgba(25, 102, 165, 0.897);
   font-size: 0.75rem;
@@ -189,6 +193,7 @@ code {
 .signgoogle {
   margin-left: 10px;
 }
+/* } */
 
 
 /* Added recently */
@@ -547,3 +552,4 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 
  } 
+

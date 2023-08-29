@@ -28,7 +28,9 @@ function Navbar() {
             onClick={handleClick}
           >
             <li>
-              <Link to="/" className="active nav-links">
+
+              <Link to="/" className="active1 nav-links">
+
                 Home
               </Link>
             </li>

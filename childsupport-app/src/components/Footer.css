@@ -1,41 +1,42 @@
 footer {
   width: 100%;
   padding: 100px 0 30px;
-  position: absolute;
-  font-size: 13px;
-  line-height: 20px;
+  border-top-left-radius: 125px;
+  color: #fff;
   background: #8fbc8f;
 }
 
-.row {
+.row2 {
+  height: 100%;
+  background: #8fbc8f;
+
   width: 85%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  background: #8fbc8f;
+
 }
 
-.col {
-  color: #fff;
+.col2 {
   flex-basis: 25%;
   padding: 10px;
 }
 
-.col:nth-child(2),
-.col:nth-child(3) {
+
+.col2:nth-child(2),
+.col2:nth-child(3) {
   flex-basis: 15%;
 }
 
-.logo {
-  padding: 20px;
-  width: 150px;
-  object-fit: contain;
+.logo2 {
+  width: 180px;
+  margin-bottom: 30px;
 }
 
-.col h3 {
-  color: white;
+.col2 h3 {
+
   width: fit-content;
   margin-bottom: 40px;
   position: relative;
@@ -50,6 +51,9 @@ footer {
 ul li {
   list-style: none;
   margin-bottom: 12px;
+
+  /* margin-right: 20px; */
+
 }
 
 ul li .nav-links {
@@ -57,7 +61,9 @@ ul li .nav-links {
   color: #fff;
 }
 
-footer form {
+
+form {
+
   padding-bottom: 15px;
   display: flex;
   align-items: center;
@@ -66,29 +72,53 @@ footer form {
   margin-bottom: 50px;
 }
 
-footer form input {
+
+form .far {
+  color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+form input {
   width: 100%;
   background: transparent;
-  border: 1px solid #5e8aa8;
+  border: 0;
   outline: none;
 }
 
-footer form button {
+form button {
   background: transparent;
   border: 0;
   outline: none;
   cursor: pointer;
 }
 
+
+form button .fas {
+  font-size: 16px;
+  color: #fff;
+}
+
+.social-icons .fab {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
 hr {
   width: 90%;
   border: 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #fff;
+
   margin: 20px auto;
 }
 
 .copyright {
-  color: white;
   text-align: center;
 }
 
@@ -106,7 +136,8 @@ hr {
 .underline span {
   width: 15px;
   height: 100%;
-  background-color: #fff;
+
+  background: #fff;
   border-radius: 3px;
   position: absolute;
   top: 0;
@@ -123,39 +154,15 @@ hr {
   }
 }
 
-/* @media only screen and (max-width: 700px) {
-  .col {
-    flex-basis: 100%;
-    padding: 10px;
-  }
-
-  .col:nth-child(2),
-  .col:nth-child(3) {
-    flex-basis: 100%;
-  }
-} */
-
-/* Keep your existing CSS up to the media query for larger screens */
 
 @media only screen and (max-width: 700px) {
-  .row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .col {
+  .col2 {
     flex-basis: 100%;
-    padding: 10px;
-    text-align: center;
   }
 
-  /* Remove the display: none; for the second and third columns */
-  /* .col:nth-child(2),
-  .col:nth-child(3) {
-    display: none;
-  } */
-
-  footer form {
-    margin-top: 20px; /* Add some space above the form */
+  .col2:nth-child(2),
+  .col2:nth-child(3) {
+    flex-basis: 100%;
   }
+
 }

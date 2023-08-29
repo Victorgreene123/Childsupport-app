@@ -5,13 +5,17 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer>
-      <div className="row">
-        <div className="col">
+
+      <div className="row2">
+        <div className="col2">
+
           <Link to="/" className="navbar-logo">
             <img
               src={process.env.PUBLIC_URL + "/logo.png"}
               alt="logo"
-              className="logo"
+
+              className="logo2"
+
             />
           </Link>
           <p>
@@ -21,7 +25,8 @@ function Footer() {
             dolor fugit. Quibusdam.
           </p>
         </div>
-        <div className="col">
+        <div className="col2">
+
           <h3>
             Office
             <div className="underline">
@@ -36,7 +41,9 @@ function Footer() {
           <h4>phone number</h4>
           <h4>phone number</h4>
         </div>
-        <div className="col">
+
+        <div className="col2">
+
           <h3>
             Links
             <div className="underline">
@@ -66,7 +73,9 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div className="col">
+
+        <div className="col2">
+
           <h3>
             Newsletter
             <div className="underline">
@@ -74,13 +83,26 @@ function Footer() {
             </div>
           </h3>
           <form action="#">
+
+            <i className="far fa-envelope"></i>
+
             <input
               type="email"
               placeholder="Enter your email address"
               required
             />
-            <button type="submit">Subscribe</button>
+
+            <button type="submit">
+              <i className="fas fa-arrow-right"></i>
+            </button>
           </form>
+          <div className="social-icons">
+            <i className="fab fa-facebook-f"></i>
+            <i className="fab fa-twitter"></i>
+            <i className="fab fa-whatsapp"></i>
+            <i className="fab fa-instagram"></i>
+          </div>
+
         </div>
       </div>
       <hr />
