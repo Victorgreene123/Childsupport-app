@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom';
+
 import '../App';
-import '../index.css'
-import React from 'react';
+import '../index.css';
 import Statistics from './statistics';
 import Sessionscontainer from './sessionscontainer';
 
