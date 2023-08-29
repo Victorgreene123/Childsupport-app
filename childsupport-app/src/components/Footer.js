@@ -5,13 +5,17 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer>
+
       <div className="row2">
         <div className="col2">
+
           <Link to="/" className="navbar-logo">
             <img
               src={process.env.PUBLIC_URL + "/logo.png"}
               alt="logo"
+
               className="logo2"
+
             />
           </Link>
           <p>
@@ -22,6 +26,7 @@ function Footer() {
           </p>
         </div>
         <div className="col2">
+
           <h3>
             Office
             <div className="underline">
@@ -36,7 +41,9 @@ function Footer() {
           <h4>phone number</h4>
           <h4>phone number</h4>
         </div>
+
         <div className="col2">
+
           <h3>
             Links
             <div className="underline">
@@ -66,7 +73,9 @@ function Footer() {
             </li>
           </ul>
         </div>
+
         <div className="col2">
+
           <h3>
             Newsletter
             <div className="underline">
@@ -74,12 +83,15 @@ function Footer() {
             </div>
           </h3>
           <form action="#">
+
             <i className="far fa-envelope"></i>
+
             <input
               type="email"
               placeholder="Enter your email address"
               required
             />
+
             <button type="submit">
               <i className="fas fa-arrow-right"></i>
             </button>
@@ -90,6 +102,7 @@ function Footer() {
             <i className="fab fa-whatsapp"></i>
             <i className="fab fa-instagram"></i>
           </div>
+
         </div>
       </div>
       <hr />

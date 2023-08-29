@@ -1,10 +1,13 @@
+
 .row {
   display: flex;
 }
 
+
 .error-msg {
   color: #ff0000;
 }
+
 
 .form > .signin,
 .witgoogle {

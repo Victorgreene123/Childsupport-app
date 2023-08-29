@@ -9,18 +9,21 @@ footer {
 .row2 {
   height: 100%;
   background: #8fbc8f;
+
   width: 85%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
+
 }
 
 .col2 {
   flex-basis: 25%;
   padding: 10px;
 }
+
 
 .col2:nth-child(2),
 .col2:nth-child(3) {
@@ -33,6 +36,7 @@ footer {
 }
 
 .col2 h3 {
+
   width: fit-content;
   margin-bottom: 40px;
   position: relative;
@@ -47,7 +51,9 @@ footer {
 ul li {
   list-style: none;
   margin-bottom: 12px;
+
   /* margin-right: 20px; */
+
 }
 
 ul li .nav-links {
@@ -55,7 +61,9 @@ ul li .nav-links {
   color: #fff;
 }
 
+
 form {
+
   padding-bottom: 15px;
   display: flex;
   align-items: center;
@@ -63,6 +71,7 @@ form {
   border-bottom: 1px solid #fff;
   margin-bottom: 50px;
 }
+
 
 form .far {
   color: #fff;
@@ -84,6 +93,7 @@ form button {
   cursor: pointer;
 }
 
+
 form button .fas {
   font-size: 16px;
   color: #fff;
@@ -104,6 +114,7 @@ hr {
   width: 90%;
   border: 0;
   border-bottom: 1px solid #fff;
+
   margin: 20px auto;
 }
 
@@ -125,6 +136,7 @@ hr {
 .underline span {
   width: 15px;
   height: 100%;
+
   background: #fff;
   border-radius: 3px;
   position: absolute;
@@ -142,6 +154,7 @@ hr {
   }
 }
 
+
 @media only screen and (max-width: 700px) {
   .col2 {
     flex-basis: 100%;
@@ -151,4 +164,5 @@ hr {
   .col2:nth-child(3) {
     flex-basis: 100%;
   }
+
 }

@@ -38,12 +38,15 @@ nav {
 
 .navbar-container li .nav-links:hover,
 .navbar-container li .nav-links.active1 {
+
   color: #8b6b61;
   transition: all 0.6s;
 }
 
 .navbar-container li .nav-links:hover::after,
+
 .navbar-container li .nav-links.active1::after {
+
   content: "";
   width: 50%;
   height: 2px;
