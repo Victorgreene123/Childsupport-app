@@ -1,0 +1,154 @@
+footer {
+  width: 100%;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+  color: #fff;
+  background: #8fbc8f;
+}
+
+.row2 {
+  height: 100%;
+  background: #8fbc8f;
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.col2 {
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.col2:nth-child(2),
+.col2:nth-child(3) {
+  flex-basis: 15%;
+}
+
+.logo2 {
+  width: 180px;
+  margin-bottom: 30px;
+}
+
+.col2 h3 {
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.email-id {
+  width: fit-content;
+  border-bottom: 1px solid #fff;
+  margin: 20px 0;
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 12px;
+  /* margin-right: 20px; */
+}
+
+ul li .nav-links {
+  text-decoration: none;
+  color: #fff;
+}
+
+form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 50px;
+}
+
+form .far {
+  color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+form input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: none;
+}
+
+form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+form button .fas {
+  font-size: 16px;
+  color: #fff;
+}
+
+.social-icons .fab {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  margin: 20px auto;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.underline {
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+
+.underline span {
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .col2 {
+    flex-basis: 100%;
+  }
+
+  .col2:nth-child(2),
+  .col2:nth-child(3) {
+    flex-basis: 100%;
+  }
+}

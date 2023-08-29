@@ -1,3 +1,9 @@
+.logo {
+  padding: 20px;
+  width: 150px;
+  object-fit: contain;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -8,12 +14,6 @@ nav {
 
 .nav-items-container {
   display: flex;
-}
-
-.navbar-logo {
-  font-size: 2rem;
-  text-decoration: none;
-  color: #fff;
 }
 
 .navbar-container {
@@ -29,7 +29,6 @@ nav {
   word-break: keep-all;
 }
 
-
 .navbar-container li .nav-links {
   text-decoration: none;
   font-size: 1.3rem;
@@ -37,19 +36,14 @@ nav {
   color: #fff;
 }
 
-
 .navbar-container li .nav-links:hover,
-.navbar-container li .nav-links.active {
-
-
+.navbar-container li .nav-links.active1 {
   color: #8b6b61;
   transition: all 0.6s;
 }
 
-
 .navbar-container li .nav-links:hover::after,
-.navbar-container li .nav-links.active::after {
-
+.navbar-container li .nav-links.active1::after {
   content: "";
   width: 50%;
   height: 2px;
@@ -59,7 +53,6 @@ nav {
   left: 20px;
   transition: all 0.6s;
 }
-
 
 .nav-link-btn {
   text-decoration: none;
@@ -73,7 +66,6 @@ nav {
   transition: all 0.6s;
 }
 
-
 .sign-in {
   padding: 4px 18px;
   background-color: transparent;
@@ -86,11 +78,9 @@ nav {
   margin-left: 20px;
 }
 
-
 .sign-in:hover {
   border: 1px solid #8b6b61;
 }
-
 
 .mobile {
   display: none;

@@ -1,0 +1,68 @@
+.about__container {
+  max-width: 100%;
+  min-height: 100vh;
+  color: #8fbc8f;
+}
+
+.intro {
+  padding: 30px;
+  padding-right: 100px;
+  padding-left: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro h1 {
+  font-size: 10rem;
+  font-weight: 500;
+  padding: 50px;
+  line-height: 0.8em;
+  text-decoration: underline;
+  color: #8fbc8f;
+}
+
+.text-content {
+  font-size: 1rem;
+  display: flex;
+  padding: 100px;
+}
+
+.description-img {
+  width: 50%;
+  object-fit: contain;
+}
+
+.therapy {
+  width: 35%;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 1080px) {
+  .intro h1 {
+    font-size: 7.5em;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 764px) {
+  .intro h1 {
+    font-size: 5em;
+  }
+
+  .text-content {
+    flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-width: 653px) {
+  .intro {
+    flex-direction: column;
+  }
+}
