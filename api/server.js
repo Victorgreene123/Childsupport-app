@@ -35,8 +35,9 @@ app.get("/", (req,res)=>{
 
 // ------------------ ALll Routes Path ------------------
 // 1 :: USER ROUTE( APIs : create new user, login, logout, delete user)
-app.use("/api/user",require("./routes/userRoute"));
-
+app.use("/api/user",require("./routes/userRoute")); // user related :: create new user, login user
+app.use("/api/peerRequest/",require("./routes/peerRequestRoute")); // create new peer req, delete peer req, fetch all peer requests of user
+app.use("/api/peer",require("./routes/peerRoute")); 
 
 const port = process.env.PORT || 5000 ;
 
