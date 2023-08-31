@@ -28,9 +28,7 @@ function Navbar() {
             onClick={handleClick}
           >
             <li>
-
               <Link to="/" className="active1 nav-links">
-
                 Home
               </Link>
             </li>
@@ -45,7 +43,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/" className="nav-links">
+              <Link to="/report-case" className="nav-links">
                 Report case
               </Link>
             </li>
