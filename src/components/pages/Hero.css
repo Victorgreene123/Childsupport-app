@@ -1,0 +1,52 @@
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero-container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
+
+.business-name {
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.business-name > h1 {
+  line-height: 20px;
+  color: #fff;
+  font-size: 100px;
+}
+
+.business-name > p {
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 960px) {
+  .business-name > h1 {
+    font-size: 70px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .business-name > h1 {
+    font-size: 50px;
+  }
+
+  .business-name p {
+    font-size: 30px;
+  }
+}

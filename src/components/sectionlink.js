@@ -9,8 +9,8 @@
 
 
 import { Link } from 'react-router-dom';
-import './App';
-import './index.css'
+import '../App';
+import '../index.css'
 import React from 'react';
 
 
@@ -41,10 +41,10 @@ export default function Sectionlink(){
 
         },
          {
-            name : 'Scholarships',
+            name : 'Donations',
             isActive: false,
             icon:'scholarship-1.png',
-            className:'Scholarship'
+            className:'Donations'
         },
         {
             name : 'Resources',
@@ -73,7 +73,7 @@ const component = linkstates.map((link) =>{
     <Link to={`/dashboard/${link.name === 'Dashboard' ? '' : link.name}`}>
     <li key={link.name}  className={`sections-link ${link.className}`}>
         <span className='sectionlinkholder'>
-        <img src={`http://localhost:3000/images/${link.icon}`} className='sectionlinkicon'></img>
+        <img src={`${process.env.PUBLIC_URL}/images/${link.icon}`} className='sectionlinkicon'></img>
         <span className='sectionlinkname'>{link.name}</span>
         </span></li>
         </Link>

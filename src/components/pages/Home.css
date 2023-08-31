@@ -1,0 +1,13 @@
+.home-content {
+  padding: 100px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature {
+  display: grid;
+  place-items: center;
+}
