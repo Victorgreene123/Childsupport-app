@@ -41,7 +41,7 @@ export const createMeeting = async ({ token }) => {
     
       const response = await fetch(VIDEOSDK_API_ENDPOINT,options)
         .then(async (result) =>{
-           const {meetingId} = await result.json()
+           const {meetingId} = await result.json().result
            return meetingId;
 
         })
