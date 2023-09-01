@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+
+
+REACT_SERVER = 'localhost:3000'
+
+VIDEOSDK_API_KEY="446eec1b-1aa1-4174-a20c-18721e6e23ee"
+VIDEOSDK_SECRET_KEY="54881fc41513a433cfd457be849c517d8c5c6eb286963a1df0100c62c2f58aa3"
+VIDEOSDK_API_ENDPOINT="https://api.videosdk.live"
