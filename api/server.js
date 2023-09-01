@@ -55,7 +55,9 @@ app.get("/get-token", (req, res) => {
   
   //
   app.post("/create-meeting/", (req, res) => {
-    const { token, region } = req.body;
+    const { token, region } = req.body.main.token;
+    const title = req.body.main.title;
+     const description = req.body.main.description;
     const url = `${process.env.VIDEOSDK_API_ENDPOINT}/v1/meetings`;
     const options = {
       method: "POST",

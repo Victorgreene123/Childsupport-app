@@ -37,8 +37,12 @@ import { Router , Navigate } from 'react-router-dom';
 
 
 
-
-export default function Create(){
+export default function Create(props){
+    const [data,setData] = useState({
+        title : props.title,
+        description: props.description
+    })
+    console.log(data)
     const [token , setToken] = useState(null)
     const [meetingId , setMeetingId] = useState(null);
 function JoinScreen({updateMeetingId , getMeetingIdandtoken}){
@@ -54,7 +58,7 @@ function JoinScreen({updateMeetingId , getMeetingIdandtoken}){
 async function getMeetingIdandtoken (){
     const token = await getToken();
     setToken(token);
-    setMeetingId(meetingId ? meetingId : (await createMeeting({token})));
+    setMeetingId(meetingId ? meetingId : (await createMeeting({token} ,data)));
 
 }
 
