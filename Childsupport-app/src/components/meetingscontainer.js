@@ -32,7 +32,7 @@ export default function Meetings(){
             <td>John Doe</td>
             
             <td className='Live'>LIVE</td>
-            <td> <Join meetingId = 'rtgp-mx2r-a0te' /></td>
+            <td> <Join meetingId = 'm9at-4rq2-wdec' /></td>
         </tr>
 
         <Meetinglist />

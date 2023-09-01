@@ -110,7 +110,7 @@ function ParticipantView(props){
                 //
                 url={videoStream}
                 //
-                height={"300px"}
+                height={"180px"}
                width={"300px"}
                 onError={(err) => {
                   console.log(err, "participant video error");
@@ -122,12 +122,13 @@ function ParticipantView(props){
       }
 
 function Controls(props){
-    const {leave , toggleMic , toggleWebcam} = useMeeting();
+    const {leave , toggleMic , toggleWebcam , toggleScreenShare} = useMeeting();
     return (
         <div>
             <button onClick={() => leave()}>Leave</button>
             <button onClick={() => toggleWebcam()}>toggleWebcam</button>
-            <button onClick={() => toggleMic()}>Leave</button>
+            <button onClick={() => toggleMic()}>toggleMic</button>
+            <button onClick={() => toggleScreenShare()}>toggleScreenShare</button>
         </div>
     );
 
