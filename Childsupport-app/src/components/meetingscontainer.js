@@ -43,15 +43,14 @@ async function handleSubmit(e) {
       description : formData[0].description
     }
     const token = await getToken();
-    const meetingId= await createMeeting({token} ,data);
+    const {meetingId}= await createMeeting({token} ,data);
 
 
 
-//  return  (
-//    <Navigate to={`/meetings/${meetingId}/${token}`}/>
-    
-   
-// ) 
+ 
+   const link =`${process.env.PUBLIC_URL}meetings/${meetingId}/${token}`
+    window.location.href = link;
+  
 }
 
 
