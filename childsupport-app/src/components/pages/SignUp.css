@@ -1,13 +1,19 @@
-
 .row {
   display: flex;
 }
 
+@media only screen and (max-width: 680px) {
+  .form {
+    flex-direction: column;
+  }
+  .options {
+    display: none;
+  }
+}
 
 .error-msg {
   color: #ff0000;
 }
-
 
 .form > .signin,
 .witgoogle {

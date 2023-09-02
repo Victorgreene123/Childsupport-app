@@ -1,37 +1,34 @@
+import { Link } from "react-router-dom";
+import "../App";
+import "../index.css";
+import React from "react";
+import Sectionlink from "./sectionlink";
+import "./dashboard.css";
 
+export default function Sidenav() {
+  return (
+    <div className="sidenav">
+      <div className="block1">
+        <ul className="sections">
+          <h3 className="section-heading">NAVIGATION</h3>
+          <Sectionlink></Sectionlink>
+          <h3 className="section-heading">ACTIONS</h3>
 
-
-
-
-
-
-import { Link } from 'react-router-dom';
-import '../App';
-import '../index.css'
-import React from 'react';
-import Sectionlink from './sectionlink';
-
-export default function Sidenav(){
-return(
-<div className='sidenav'>
-  <div className='block1'>
-  <ul className='sections'>
-    <h3 className='section-heading'>NAVIGATION</h3>
-    <Sectionlink ></Sectionlink>
-    <h3 className='section-heading'>ACTIONS</h3>
- 
-    <a className='sections-link' id='settings'><span className='sectionlinkholder'>
-        <img src='http://localhost:3000/settings.png' className='sectionlinkicon'></img>
-        <span className='sectionlinkname'>Settings</span>
-        </span></a>
-    
-   
-  </ul>
-  </div>
-  <div className='aside'>
-  
-     
-     {/* <div className='profile'>
+          <Link className="sections-link" id="settings">
+            <span className="sectionlinkholder">
+              <img
+                className="sectionlinkicon"
+                src={process.env.PUBLIC_URL + "/settings.png"}
+                alt="settings"
+              />
+              <span className="sectionlinkname">Settings</span>
+            </span>
+          </Link>
+          {/* {process.env.PUBLIC_URL + "/settings.png"} */}
+        </ul>
+      </div>
+      <div className="aside">
+        {/* <div className='profile'>
       
          <div className='pic'>
           <img src='images/children.png'  className='profilepic'></img>
@@ -42,12 +39,18 @@ return(
          
        </div>
      </div> */}
-   <a className='sections-link logout'> <span className='sectionlinkholder'>
-        <img src='http://localhost:3000/logout-1.png' className='sectionlinkicon'></img>
-        <span className='sectionlinkname logoutname'> Log out </span></span></a>
- </div>
-    
-</div>
-
-)
+        <Link className="sections-link logout">
+          {" "}
+          <span className="sectionlinkholder">
+            <img
+              src={process.env.PUBLIC_URL + "/logout.png"}
+              alt="logout"
+              className="sectionlinkicon"
+            />
+            <span className="sectionlinkname logoutname"> Log out </span>
+          </span>
+        </Link>
+      </div>
+    </div>
+  );
 }

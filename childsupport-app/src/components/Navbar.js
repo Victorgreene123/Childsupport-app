@@ -1,9 +1,14 @@
 import "./Navbar.css";
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [activeLink, setActiveLink] = useState("home"); // Initialize with the default active link (e.g., "home")
+
+  const handleLinkClick = (linkName) => {
+    setActiveLink(linkName);
+  };
+
   const [click, setClick] = useState(true);
 
   const handleClick = () => {
@@ -28,24 +33,46 @@ function Navbar() {
             onClick={handleClick}
           >
             <li>
-
-              <Link to="/" className="active1 nav-links">
-
+              <Link
+                to="/"
+                className={
+                  activeLink === "home" ? "active1 nav-links" : "nav-links"
+                }
+                onClick={() => handleLinkClick("home")}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" className="nav-links">
+              <Link
+                to="/about"
+                className={
+                  activeLink === "about" ? "active1 nav-links" : "nav-links"
+                }
+                onClick={() => handleLinkClick("about")}
+              >
                 About
               </Link>
             </li>
             <li>
-              <Link to="/" className="nav-links">
-                Contact us
+              <Link
+                to="/contact"
+                className={
+                  activeLink === "contact" ? "active1 nav-links" : "nav-links"
+                }
+                onClick={() => handleLinkClick("contact")}
+              >
+                Contact
               </Link>
             </li>
             <li>
-              <Link to="/" className="nav-links">
+              <Link
+                to="/report-case"
+                className={
+                  activeLink === "report" ? "active1 nav-links" : "nav-links"
+                }
+                onClick={() => handleLinkClick("report")}
+              >
                 Report case
               </Link>
             </li>

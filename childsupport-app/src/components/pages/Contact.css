@@ -1,0 +1,99 @@
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+}
+
+.contact-container p {
+  text-align: center;
+}
+
+.h1 {
+  font-size: 32px;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+  margin: 20px;
+}
+
+.contact-form {
+  padding: 20px;
+  padding-top: 10px;
+  width: 30%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.352);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  all: unset;
+  border: 1px solid #ccc;
+  width: 80%;
+  padding: 6px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.contact-form input[type="submit"] {
+  border: 2px solid #8fbc8f;
+  background: transparent;
+  width: 40%;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.contact-form input[type="submit"]:hover {
+  transition: all 0.4s;
+  background: #8fbc8f;
+  color: #fff;
+}
+
+.contact-cols {
+  padding: 30px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.352);
+  margin-bottom: 50px;
+}
+
+.gmail {
+  text-decoration: underline;
+  color: blue;
+}
+
+@media only screen and (max-width: 1100px) {
+  .contact-container {
+    flex-direction: column-reverse;
+  }
+
+  .contact-column {
+    display: flex;
+  }
+
+  .contact-cols {
+    flex-basis: 50%;
+    margin-left: 20px;
+  }
+
+  .contact-form {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-column {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .contact-container {
+    padding: 30px;
+  }
+}

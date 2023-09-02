@@ -1,0 +1,123 @@
+.report-container {
+  padding: 100px;
+}
+
+.report-intro {
+  color: #8b6b61;
+  padding: 50px;
+  background: #ccc;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.report-intro h1 {
+  font-size: 2rem;
+}
+
+.why-report {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.no-violence {
+  display: grid;
+  place-items: center;
+}
+
+.no-violence img {
+  width: 80%;
+  animation: shake 5ms linear 4;
+}
+
+@keyframes shake {
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.report-form form {
+  text-align: left !important;
+  margin-top: 100px;
+  color: #fff;
+  background: #8b6b61;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border: 20px solid #8fbc8f;
+  border-radius: 10px;
+}
+
+.report-form form label {
+  all: unset;
+  margin: 20px;
+  /* margin-right: 20%; */
+  text-align: left !important;
+}
+
+.report-form form input {
+  all: unset;
+  width: 60%;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+}
+
+.report-form form input:hover {
+  border: 2px solid #8fbc8f;
+}
+
+.report-form form select {
+  width: 60%;
+  background-color: white;
+  padding: 8px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.report-form form p {
+  text-align: center;
+}
+
+.report-form form .report-submit-link {
+  text-decoration: none;
+  background-color: #fff;
+  padding: 15px;
+  margin: 20px;
+  border: 5px;
+  border: 2px dashed #8fbc8f;
+  transition: all 0.2s;
+}
+
+.report-form form .report-submit-link:hover,
+.report-form form .report-submit-link:hover button {
+  background: #8fbc8f;
+  color: #fff;
+  border: 2px solid #8fbc8f;
+}
+
+.report-form form textarea {
+  width: 60%;
+  outline: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .report-container {
+    padding: 50px;
+  }
+
+  .why-report {
+    flex-direction: column-reverse;
+  }
+
+  .report-form form {
+    width: 100%;
+  }
+}
