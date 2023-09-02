@@ -16,4 +16,4 @@ const peerReqSchema = new Schema({
     }
 })
 
-model.exports = mongoose.model("PeerRequests",peerReqSchema);
+module.exports = mongoose.model("PeerRequests",peerReqSchema)

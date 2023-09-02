@@ -11,8 +11,9 @@ function Navbar() {
 
   const [click, setClick] = useState(true);
 
-  const handleClick = () => {
-    setClick(!click);
+
+  const handleLinkClick = (linkName) => {
+    setActiveLink(linkName);
   };
 
   return (
@@ -28,10 +29,7 @@ function Navbar() {
         </Link>
 
         <div className="nav-items-container">
-          <ul
-            className={click ? "navbar-container active" : "navbar-container"}
-            onClick={handleClick}
-          >
+          <ul className="navbar-container">
             <li>
               <Link
                 to="/"
@@ -84,12 +82,6 @@ function Navbar() {
               </button>
             </li>
           </ul>
-        </div>
-        <div className="mobile">
-          <i
-            className={click ? "fas fa-bars" : "fas fa-times"}
-            onClick={handleClick}
-          ></i>
         </div>
       </nav>
     </>

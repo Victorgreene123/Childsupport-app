@@ -1,3 +1,4 @@
+
 // import { Link } from "react-router-dom";
 import "../App";
 import "../index.css";
@@ -17,6 +18,7 @@ export default function Custombutton(props) {
       >
         {text}
       </button>
+
     </>
   );
 }

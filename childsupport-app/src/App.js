@@ -8,6 +8,7 @@ import About from "./components/pages/About";
 import ReportCase from "./components/pages/ReportCase";
 import Contact from "./components/pages/Contact";
 
+
 import Dashboard from "./components/dashboard";
 import Reports from "./components/Reports";
 import Dashboardcontainer from "./components/dashboardcontainer";
@@ -30,6 +31,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="report-case" element={<ReportCase />} />
             <Route path="contact" element={<Contact />} />
+
           </Route>
         </Routes>
         <Routes>
