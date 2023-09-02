@@ -10,7 +10,7 @@
 
 const API_BASE_URL = "https://api.videosdk.live";
 
-const LOCAL_SERVER_URL = "http://localhost:9000"
+const LOCAL_SERVER_URL = "http://localhost:5000"
 export const getToken = async () => {
   try{
     const response = await fetch(`${LOCAL_SERVER_URL}/get-token`,{

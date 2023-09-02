@@ -22,7 +22,73 @@ h1,h2,h3,h4,h5,h6{
 }
 
 @media only screen and (max-width : 766px) {
-   
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .options {
+    width: 100%;
+  }
+}
+
+/* @media only screen and (min-width: 677px) { */
+
+.navbar {
+  border-bottom: 0.5px solid white;
+  display: flex;
+  width: auto;
+  align-items: center;
+  border-color: white;
+  margin: 0;
+  color: white;
+  padding: 2px 15px;
+  position: relative;
+  height: 55px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+
+.navitems {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+.navitems > li {
+  font-size: 15px;
+  padding-left: 10px;
+  text-decoration: none;
+  font-weight: 250;
+}
+.navitems > li > a {
+  text-decoration: none;
+  color: white;
+}
+.container {
+  width: 70%;
+  margin-left: 15%;
+  border: 0.5px solid white;
+  border-radius: 5px;
+  padding: 0px;
+  margin-block: 40px;
+  font-size: 12px;
+  text-align: left;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.row {
+  display: flex;
+  /* padding: 35px; */
+  background-color: white;
+  height: 600px;
 }
 @media only screen and (min-width : 767px) {
   .navbar{
@@ -46,7 +112,7 @@ h1,h2,h3,h4,h5,h6{
       right: 0;
     }
     .navitems > li{
-      font-size: 15px;
+      font-size: 10px;
       padding-left: 10px;
       text-decoration: none;
       font-weight: 250;
@@ -591,10 +657,8 @@ border: 0.5px solid white;
   color: white;
   font-size: 0.8rem;
  }
- .resourcescontainer{
-  /* background-color: #f5f4f2; */
-
- }
+ 
+ 
  .resource{
   /* padding: 10px; */
   border: 0.5px solid white ;
@@ -647,11 +711,7 @@ border: 0.5px solid white;
   text-decoration: none;
   color: black;
  }
- .img-circle{
-  /* border: 0.5px solid blueviolet; */
-  /* border-radius: 40%; */
-  /* padding: 10px; */
- }
+
  .section-box-image{
   width : 100%;
   /* margin-left:10%; */
@@ -659,12 +719,14 @@ border: 0.5px solid white;
  }
  .section-box{
   border: 0.5px solid  white;
-  background-color: white;
+  background-color: rgb(6, 145, 36);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.189);
   width : calc( 100% - 30px);
   height: auto;
   padding: 10px;
   margin-bottom: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
  }
  .section-box-container{
   width: 50%;
@@ -685,12 +747,9 @@ border: 0.5px solid white;
  .searchinput{
   width: 100%;
   padding-block : 5px;
-  border: none;
+  border: 0.5px solid black;
  }
- .searchinput  :active{
-  border: none;
-
- }
+ 
  .searchresultlist{
   margin: 0;
     width: 100%;
@@ -703,7 +762,7 @@ border: 0.5px solid white;
    /* border: 0.5px solid black; */
    background-color: black;
    color: white;
-   padding-block: 2px;
+   padding-block: 0px;
    height: 50px;
    width:calc(100%);
  }

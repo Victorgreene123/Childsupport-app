@@ -74,10 +74,10 @@ nav {
   background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 55px;
   font-weight: 600;
   height: 40px;
-  position: relative;
+  /* position: relative; */
   margin-left: 20px;
 }
 
