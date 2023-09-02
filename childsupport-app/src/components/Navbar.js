@@ -24,6 +24,7 @@ function Navbar() {
         <div className="nav-items-container">
           <ul className="navbar-container">
             <li>
+
               <Link
                 to="/"
                 className={
@@ -31,6 +32,7 @@ function Navbar() {
                 }
                 onClick={() => handleLinkClick("home")}
               >
+
                 Home
               </Link>
             </li>
@@ -57,6 +59,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
+
               <Link
                 to="/report-case"
                 className={
@@ -64,6 +67,7 @@ function Navbar() {
                 }
                 onClick={() => handleLinkClick("report")}
               >
+
                 Report case
               </Link>
             </li>

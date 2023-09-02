@@ -16,4 +16,4 @@ const peerSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model("Peer",peerSchema);
+module.exports = mongoose.model("Peer",peerSchema); 
