@@ -28,15 +28,22 @@ export const getToken = async () => {
   }
 };
 
-export const createMeeting = async ({ token }) => {
+export const createMeeting = async ({ token },data) => {
       try{
+        const main = {
+           token:{token},
+           title : data.title,
+           description : data.description
+        }
         const VIDEOSDK_API_ENDPOINT = `${LOCAL_SERVER_URL}/create-meeting`;
         const options ={
           method : "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({token}),
+          body: JSON.stringify({main}),
+            
+          
         }
     
       const response = await fetch(VIDEOSDK_API_ENDPOINT,options)

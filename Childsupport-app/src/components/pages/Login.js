@@ -50,7 +50,11 @@ export default function Login() {
     }
     // console.log(formData)
   }
-  function handleSubmit() {}
+  function handleSubmit(e) {
+    e.preventDefault()
+    const link =`${process.env.PUBLIC_URL}dashboard`
+    window.location.href = link;
+  }
   return (
     <div className="container">
       <div className="row">
@@ -58,7 +62,7 @@ export default function Login() {
           <div className="form-body">
             <h2>Welcome back</h2>
             <p>Welcome back please enter your details</p>
-            <form className="form" onSubmit={handleSubmit}>
+            <form className="form" onSubmit={(e) => handleSubmit(e)}>
               <div className="form-input">
                 <label>Email</label>
                 <input

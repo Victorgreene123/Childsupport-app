@@ -24,7 +24,11 @@ return(
 
 
         </div>
-        <button className='addreport' onClick={() => console.log('aDDED REPORT')}>Add Report</button>
+        <button className='addreport' onClick={() => {
+            const link =`${process.env.PUBLIC_URL}/report-case`
+            window.location.href = link;
+            console.log('aDDED REPORT')
+            }}>Add Report</button>
 
 
     </div>
