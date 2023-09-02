@@ -2,7 +2,6 @@
   padding: 100px;
 }
 
-
 .intro2 {
   line-height: 20px;
 }
@@ -26,7 +25,6 @@
   display: grid;
   place-items: center;
 }
-
 
 .feature h1 {
   text-align: center;
@@ -91,4 +89,3 @@
     flex-direction: column-reverse;
   }
 }
-

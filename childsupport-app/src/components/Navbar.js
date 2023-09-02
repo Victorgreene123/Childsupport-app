@@ -9,6 +9,13 @@ function Navbar() {
     setActiveLink(linkName);
   };
 
+  const [click, setClick] = useState(true);
+
+
+  const handleLinkClick = (linkName) => {
+    setActiveLink(linkName);
+  };
+
   return (
     <>
       <nav>
@@ -24,7 +31,6 @@ function Navbar() {
         <div className="nav-items-container">
           <ul className="navbar-container">
             <li>
-
               <Link
                 to="/"
                 className={
@@ -32,7 +38,6 @@ function Navbar() {
                 }
                 onClick={() => handleLinkClick("home")}
               >
-
                 Home
               </Link>
             </li>
@@ -55,11 +60,10 @@ function Navbar() {
                 }
                 onClick={() => handleLinkClick("contact")}
               >
-                Contact us
+                Contact
               </Link>
             </li>
             <li>
-
               <Link
                 to="/report-case"
                 className={
@@ -67,7 +71,6 @@ function Navbar() {
                 }
                 onClick={() => handleLinkClick("report")}
               >
-
                 Report case
               </Link>
             </li>

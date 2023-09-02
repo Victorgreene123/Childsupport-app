@@ -2,7 +2,7 @@
 import "../App";
 import "../index.css";
 import React from "react";
-import Sectionlink from "./sectionlink";
+// import Sectionlink from "./sectionlink";
 import "./dashboard.css";
 export default function Statistics() {
   return (

@@ -6,6 +6,8 @@ import SignUp from "./components/pages/SignUp";
 import Login from "./components/pages/Login";
 import About from "./components/pages/About";
 import ReportCase from "./components/pages/ReportCase";
+import Contact from "./components/pages/Contact";
+
 
 import Dashboard from "./components/dashboard";
 import Reports from "./components/Reports";
@@ -28,6 +30,8 @@ function App() {
             <Route path="signup" element={<SignUp />} />
             <Route path="about" element={<About />} />
             <Route path="report-case" element={<ReportCase />} />
+            <Route path="contact" element={<Contact />} />
+
           </Route>
         </Routes>
         <Routes>

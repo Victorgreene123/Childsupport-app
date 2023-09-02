@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "../App";
 import "../index.css";
 import React from "react";
-import Sectionlink from "./sectionlink";
+// import Sectionlink from "./sectionlink";
 import { memo } from "react";
 import "./dashboard.css";
 
@@ -32,7 +32,7 @@ export default memo(function SessionsContainer() {
               <td className="Live">LIVE</td>
               <td>
                 {" "}
-                <a className="join">Join</a>
+                <Link className="join">Join</Link>
               </td>
             </tr>
 
@@ -42,7 +42,7 @@ export default memo(function SessionsContainer() {
 
               <td className="Live">LIVE</td>
               <td>
-                <a className="join">Join</a>
+                <Link className="join">Join</Link>
               </td>
             </tr>
           </tbody>
