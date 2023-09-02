@@ -1,13 +1,12 @@
 import "./Navbar.css";
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const [click, setClick] = useState(true);
+  const [activeLink, setActiveLink] = useState("home"); // Initialize with the default active link (e.g., "home")
 
-  const handleClick = () => {
-    setClick(!click);
+  const handleLinkClick = (linkName) => {
+    setActiveLink(linkName);
   };
 
   return (
@@ -23,27 +22,52 @@ function Navbar() {
         </Link>
 
         <div className="nav-items-container">
-          <ul
-            className={click ? "navbar-container active" : "navbar-container"}
-            onClick={handleClick}
-          >
+          <ul className="navbar-container">
             <li>
-              <Link to="/" className="active1 nav-links">
+
+              <Link
+                to="/"
+                className={
+                  activeLink === "home" ? "active1 nav-links" : "nav-links"
+                }
+                onClick={() => handleLinkClick("home")}
+              >
+
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" className="nav-links">
+              <Link
+                to="/about"
+                className={
+                  activeLink === "about" ? "active1 nav-links" : "nav-links"
+                }
+                onClick={() => handleLinkClick("about")}
+              >
                 About
               </Link>
             </li>
             <li>
-              <Link to="/" className="nav-links">
+              <Link
+                to="/contact"
+                className={
+                  activeLink === "contact" ? "active1 nav-links" : "nav-links"
+                }
+                onClick={() => handleLinkClick("contact")}
+              >
                 Contact us
               </Link>
             </li>
             <li>
-              <Link to="/report-case" className="nav-links">
+
+              <Link
+                to="/report-case"
+                className={
+                  activeLink === "report" ? "active1 nav-links" : "nav-links"
+                }
+                onClick={() => handleLinkClick("report")}
+              >
+
                 Report case
               </Link>
             </li>
@@ -55,12 +79,6 @@ function Navbar() {
               </button>
             </li>
           </ul>
-        </div>
-        <div className="mobile">
-          <i
-            className={click ? "fas fa-bars" : "fas fa-times"}
-            onClick={handleClick}
-          ></i>
         </div>
       </nav>
     </>

@@ -59,6 +59,38 @@ function Home() {
             </Link>
           </button>
         </div>
+        <div className="more-features">
+          <h2>More features</h2>
+          <p>Read all about it</p>
+          <ul>
+            <li>
+              <strong>certified therapists</strong>: Our team consists of
+              experienced and certified therapists who specialize in child
+              psychology and trauma. They are dedicated to providing the highest
+              quality care and support to your child.
+            </li>
+            <li>
+              <strong>Scholarship Program</strong>: We offer a scholarship
+              program to support the educational needs of children affected by
+              domestic violence. This program includes financial assistance for
+              school-related expenses and educational resources.
+            </li>
+            <li>
+              <strong>Donations</strong>: Your generous donations help us
+              continue our mission. Contributions from caring individuals like
+              you enable us to expand our services, reach more children, and
+              create a safer world for them.
+            </li>
+            <li>
+              <strong>Interaction with Peers and Mentors</strong>: Your child
+              can connect with other children who have faced similar challenges
+              and experienced healing. Our mentorship program fosters a
+              supportive community where children can share, learn, and grow
+              together.
+            </li>
+          </ul>
+        </div>
+
       </div>
     </>
   );
